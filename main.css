@@ -49,13 +49,26 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
+/* container holding image and words on homepage*/
+.imageWithInfo{
+  width: 100%;
+  display: flex; 
+  background-color: black;
+  vertical-align: middle;
+}
+/* container holding name and short bio on homepage*/
+.personal{
+  flex: 1;
+  color: white;
+  margin: 20px;
+  width: 550px;
+  font-family: Arial, Helvetica, sans-serif;
+  float: right;
+  display: inline;
+}
 .title {
     color: cornflowerblue;
     font-size: xx-large;
-}
-div {
-    background-color: black;
 }
 .hey{
     color: white;
@@ -69,28 +82,45 @@ div {
 }
 .shortBio{
     color: white;
-    text-align: justify;
     padding-bottom: 10px;
+    text-align: right;
 }
 .me{
-    float: left;
+    flex: 1;
     margin-left: 20px;
     margin-top: 20px;
-    display: inline;
 }
-.personal{
-
-    color: white;
-    margin: 20px;
-    width: 550px;
-    font-family: Arial, Helvetica, sans-serif;
-    float: right;
-    display: inline;
-}
-.homescreen{
-    vertical-align: middle;
-    width: 800px;
-    height: 800px;
+/* Add a black background color to the top navigation */
+.topnav {
     background-color: black;
-    display: inline;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    background-color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: cornflowerblue;
+    color: white;
+  }
+.words {
+  color:white;
 }
