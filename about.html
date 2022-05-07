@@ -1,10 +1,59 @@
 <html>
-    <div>
     <head>
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="about.css">
+        <!-- Link to React, React DOM, and Babel. -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js" charset="utf-8"></script>
         <title>
             joriem.me
         </title>
+        <!-- create quiz component-->
+      <script type="text/babel">
+      class Quiz extends React.Component {
+          constructor(props) {
+              super(props);
+              this.state = {
+                  correct: null
+              };
+          }
+  
+          answer(correct) {
+              this.setState({
+                  correct
+              });
+          }
+  
+          render() {
+              let question = null;
+              if (this.state.correct === null) {
+                  question = <div>
+                      <button onClick={() => this.answer(false)}>a) Concord, Mass</button>
+                      <button onClick={() => this.answer(true)}>b) San Diego, California</button>
+                      <button onClick={() => this.answer(false)}>c) Kanas City, Missouri</button>
+                  </div>;
+              }
+              let answer = null;
+              if (this.state.correct === true) {
+                  answer = <div className="correct">Correct! I live in the town of La Jolla, in San Diego, CA. :)</div>;
+              } else if (this.state.correct === false) {
+                  answer = <div className="incorrect">Nope! I'm offended! (Just kidding.) But I'm actually from San Diego, CA! :)</div>;
+              }
+  
+              return <div className="quiz">
+                  <p>Where am I from?</p>
+                  {question}
+                  {answer}
+              </div>;
+          }
+      }
+      ReactDOM.render(
+          <Quiz />,
+          document.getElementById('quiz')
+      );
+      </script>
+    </head>
+    <body>
     <div>
         <!-- create navigation bar on top of screen -->
         <div class="topnav">
@@ -13,7 +62,16 @@
             <a href="links.html">LINKS</a>
             <a href="contact.html">CONTACT</a>
         </div>
-        <p class="words">This is the about page</p>
-    </div>
-</div>
+        <div class="photoAndQuiz">
+          <!-- insert picture of me :)-->
+          <img src="images/jorie-waves.png">
+          <div class="rightColumn">
+            <p class="heyJorie">Hey, I'm Jorie!!!</p>
+            <p class="quizInfo">Take this quiz to learn some facts about me!</p>
+
+          <div id="quiz"></div>
+          </div>
+        </div>
+      </div>
+    </body>
 </html>
