@@ -57,15 +57,16 @@ table {
   vertical-align: middle;
 }
 /* container holding name and short bio on homepage*/
-.personal{
+.personal {
   flex: 1;
   color: white;
-  margin: 20px;
+  margin-top: 300px;
+  margin-right: 20px;
   width: 550px;
   height: fit-content;
   font-family: Arial, Helvetica, sans-serif;
   float: right;
-  display: inline;
+  display: block;
 }
 .title {
     color: cornflowerblue;
@@ -87,9 +88,10 @@ table {
     text-align: right;
 }
 .me{
-    flex: 1;
     margin-left: 20px;
     margin-top: 20px;
+    width: 100%;
+    height: auto;
 }
 /* Add a black background color to the top navigation */
 .topnav {

@@ -49,9 +49,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* Add a black background color to the top navigation */
+/* Add a pink background color to the top navigation */
 .topnav {
-    background-color: black;
+    background-color: pink;
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -61,7 +61,7 @@ table {
   /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
-    background-color: black;
+    background-color: pink;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -96,4 +96,23 @@ table {
 }
 .myLinks{
     margin-top: 20px;
+}
+.email{
+  margin-top: 100px;
+  font-size: xx-large;
+  text-align: center;
+}
+.icons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.linkImage{
+  display: flex;
+  flex-direction: column;
+  width: 300;
+  align-items: center;
 }

@@ -10,6 +10,19 @@
         </title>
         <!-- create quiz component-->
       <script type="text/babel">
+          const questionText = [
+              {prompt: "Where am I from?", ans1: "Concord, MA", ans2: "San Diego, CA", ans3: "Fort Worth, TX"},
+              {prompt: "What's my favorite color?", ans1: "Blue", ans2: "Green", ans3: "Pink!"},
+              {prompt: "Should you hire me?", ans1: "Yes!", ans2: "YESSSSSSSS!!!", ans3: "Yessssss!",}
+          ]
+          const trueOrFalse = [
+
+          ]
+          
+          const responseMessages = [
+
+          ]
+
       class Quiz extends React.Component {
           constructor(props) {
               super(props);
@@ -26,25 +39,25 @@
   
           render() {
               let question = null;
-              if (this.state.correct === null) {
                   question = <div>
-                      <button onClick={() => this.answer(false)}>a) Concord, Mass</button>
-                      <button onClick={() => this.answer(true)}>b) San Diego, California</button>
-                      <button onClick={() => this.answer(false)}>c) Kanas City, Missouri</button>
+                    {questionText.length > 0 && questionText.map((question) => {
+                        return(
+                            <div>
+                                <p class="prompt">{question.prompt}</p>   
+                                {this.state.correct ? <div className="correct">Correct! :)</div> : <div className="incorrect">Not quite.</div>}
+                                <button onClick={() => this.answer(false)}>{question.ans1}</button>
+                                <button onClick={() => this.answer(true)}>{question.ans2}</button>
+                                <button onClick={() => this.answer(false)}>{question.ans3}</button>
+                             </div>
+                        );
+                    })}
                   </div>;
-              }
               let answer = null;
-              if (this.state.correct === true) {
-                  answer = <div className="correct">Correct! I live in the town of La Jolla, in San Diego, CA. :)</div>;
-              } else if (this.state.correct === false) {
-                  answer = <div className="incorrect">Nope! I'm offended! (Just kidding.) But I'm actually from San Diego, CA! :)</div>;
-              }
-  
               return <div className="quiz">
-                  <p>Where am I from?</p>
                   {question}
                   {answer}
               </div>;
+   
           }
       }
       ReactDOM.render(
@@ -60,17 +73,18 @@
             <a href="index.html">HOME</a>
             <a class = "active" href="about.html">ABOUT</a>
             <a href="links.html">LINKS</a>
-            <a href="contact.html">CONTACT</a>
         </div>
         <div class="photoAndQuiz">
-          <!-- insert picture of me :)-->
-          <img src="images/jorie-waves.png">
-          <div class="rightColumn">
-            <p class="heyJorie">Hey, I'm Jorie!!!</p>
-            <p class="quizInfo">Take this quiz to learn some facts about me!</p>
-
+            <!-- insert picture of me :)-->
+            <div class="imageContainer">
+                <img src="images/jorie-waves.png">
+            </div>
+          <div class="personal">
+            <p class="bigName">Hey, I'm Jorie!!!</p>
+            <p class="shortBio">Take this quiz to learn some facts about me!</p>
           <div id="quiz"></div>
           </div>
+          
         </div>
       </div>
     </body>

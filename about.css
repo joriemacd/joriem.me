@@ -90,10 +90,14 @@ table {
     display: block;
     padding: 40px;
     color: #ffffff;
+    text-align: right;
+    float: right;
+    width: 160px;
 }
 
 .quiz button {
     display: block;
+    width: 200px;
     margin-bottom: 10px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: cornflowerblue;
@@ -104,8 +108,21 @@ table {
     color: white;
     border: none;
     outline: none;
+    float: right;
+    display: block;
 }
-
+/* change quiz option color on hover*/
+.quiz button:hover{
+  background-color: pink;
+  color: black;
+}
+.imageContainer {
+    display: block;
+    max-width:578px;
+    max-height:640px;
+    width: auto;
+    height: auto;
+}
 .quiz .correct {
     background-color: #ffffff;
     padding: 10px;
@@ -121,16 +138,33 @@ table {
 }
 .rightColumn{
     margin-top: 10;
+    margin-left: 40px;
 
 }
-.heyJorie{
-    font-size: xx-large;
-    color: white;
-    padding-bottom: 5;
+/* container holding name and short bio on homepage*/
+.personal {
+  flex: 1;
+  color: white;
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 550px;
+  height: fit-content;
+  font-family: Arial, Helvetica, sans-serif;
+  float: right;
+  display: block;
 }
-.quizInfo{
-    font-size: larger;
-    color:white;
+.bigName{
+    color: white;
+    font-size: 54px;
     text-align: right;
-    padding-bottom: 5;
+    font-weight: bold;
+}
+.shortBio{
+    margin-top: 5px;
+    color: white;
+    padding-bottom: 10px;
+    text-align: right;
+}
+.prompt{
+  margin-bottom: 5px;
 }
