@@ -18,7 +18,7 @@ It is made up of three pages, a homescreen, an about page, and a page with addit
 ![image](https://user-images.githubusercontent.com/59182265/167340226-e7893d72-5494-4106-9ca0-b6b2f953bd94.png)
 
 ## Installation
-No installation is necessary. To see the project in action, just type [joriem.me](joriem.me) into your browser of choice. :)
+No installation is necessary. To see the project in action, just type [joriem.me](https://joriem.me) into your browser of choice. :)
 
 ## License 
 This project is created with the MIT license. For more details, see LICENSE.
