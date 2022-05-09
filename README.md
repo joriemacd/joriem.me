@@ -13,4 +13,4 @@ It is made up of three pages, a homescreen, an about page, and a page with addit
 No installation is necessary. To see the project in action, just type "joriem.me" into your browser of choice. :)
 
 ## License 
-This project is created with the MIT license
+This project is created with the MIT license. For more details, see LICENSE.
