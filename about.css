@@ -124,14 +124,14 @@ table {
     height: auto;
 }
 .quiz .correct {
-    background-color: #ffffff;
+    background-color: black;
     padding: 10px;
     color: #11AF08;
     font-weight: bold;
 }
 
 .quiz .incorrect {
-    background-color: #ffffff;
+    background-color: black;
     padding: 10px;
     color: #FF0C0C;
     font-weight: bold;

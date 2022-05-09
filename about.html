@@ -43,8 +43,7 @@
                     {questionText.length > 0 && questionText.map((question) => {
                         return(
                             <div>
-                                <p class="prompt">{question.prompt}</p>   
-                                {this.state.correct ? <div className="correct">Correct! :)</div> : <div className="incorrect">Not quite.</div>}
+                                <p class="prompt">{question.prompt}</p>  
                                 <button onClick={() => this.answer(false)}>{question.ans1}</button>
                                 <button onClick={() => this.answer(true)}>{question.ans2}</button>
                                 <button onClick={() => this.answer(false)}>{question.ans3}</button>
@@ -56,6 +55,7 @@
               return <div className="quiz">
                   {question}
                   {answer}
+                  {this.state.correct ? <div className="correct">Correct! :)</div> : <div className="incorrect">Keep Trying!</div>}
               </div>;
    
           }
